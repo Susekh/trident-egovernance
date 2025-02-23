@@ -6,13 +6,13 @@ import SectionAssignForm from "../../components/section-assign/SectionAssignForm
 const page = async () => {
   const { session, role } = await authValidator();
 
-  if (!session) {
-    return <Unauthorized />;
-  }
-
-  if (role !== 'OFFICE') {
-    return <Unauthorized />;
-  }
+  // if (!session) {
+  //   return <Unauthorized />;
+  // }
+  //
+  // if (role !== 'OFFICE') {
+  //   return <Unauthorized />;
+  // }
 
   return (
     <>

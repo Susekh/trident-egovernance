@@ -65,7 +65,7 @@ export default withAuth(
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|.*\\.png$|favicon.ico|login|studentportal|verifymr|accounts/studentfeecollection/mr).*)(.+)',
+    //'/((?!api|_next/static|_next/image|.*\\.png$|favicon.ico|login|studentportal|verifymr|accounts/studentfeecollection/mr).*)(.+)',
     // '/student/:path*',
     // '/newstudentregistration',
     // '/office/:path*',

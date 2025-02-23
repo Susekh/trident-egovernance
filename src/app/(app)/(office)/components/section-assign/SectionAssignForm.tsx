@@ -12,7 +12,20 @@ import { useParticulars } from '@/app/(app)/(accounts)/components/FeeDetailsFilt
 
 
 const SectionAssignForm = () => {
-  const { branches } = useParticulars()
+  // const { branches } = useParticulars()
+  const branches = {
+    "CSE": {
+      "CSE": {
+        "branchCode": "CSE",
+        "branchName": "CSE",
+        "branchType": "CSE",
+        "branchAddress": "CSE",
+        "branchContact": "CSE",
+        "branchEmail": "CSE",
+        "branchPincode": "CSE",
+      }
+    }
+  }
 
   const branch = [...new Set(Object.values(branches).flatMap(branchObj => Object.values(branchObj).map(b => b.branchCode)))];
 
