@@ -18,8 +18,9 @@ function StaffInfoMain({ endpoint, method, profileData }: { endpoint: string; me
   useEffect(() => {
     const fetchStaffData = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/staff/dynamic-input`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/staff/dynamic-input?entityNames=StaffDepartmentEntity,StaffDesignationEntity,StaffCategoryEntity,StaffStatusEntity,StaffRoleEntity`);
         const data = await response.json();
+        console.log("Data in dynamic input ::", data);
         setStaffParticulars(data);
         setIsLoading(false);
       } catch (error) {
